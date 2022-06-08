@@ -1,26 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Joan&family=Montserrat:wght@300;400;700&display=swap');
-
+* {
+    padding: 0;
+    margin: 0;
+}
 html {
     font-family: 'Joan', serif;
 }
 body {
-background-color: rgb(27, 27, 107);
+background-color: #5A0101;
+
 }
+header {
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    margin: 30px;
+}
+header h1 {
+    font-size:60px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-image: url(img/fundo.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 h3 {
     font-size: 48px;
     color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     background-color: #5A0101;
     border: 10px solid #5A0101;
     border-radius: 10px;
+    margin: 20px;
 }
 #grid {
-    width: 1600px;
-    height: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    
+    width: 1500px;
+    height: 600px;
+    margin: auto;
+    padding: auto;
+}
+
+img {
+    width: 160px;
+    height: 160px;
+    margin: 5px;
+    transition: 0.3s ease transform;
+}
+img:hover{
+	transform: scale(1.05);
 }

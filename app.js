@@ -126,22 +126,25 @@ function checarCombinação () {
     console.log(cartas);
     console.log('Confirmando a combinação!');
     if (opcaoUmId == opcaoDoisId) {
+        alert('Você clicou na mesma carta!');
+        cartasEscolhidas[0] = [];
+        cartasEscolhidas[1] = [];
         cartas[opcaoUmId].setAttribute('src', 'img/costas.png');
         cartas[opcaoDoisId].setAttribute('src', 'img/costas.png');
-        alert('Você clicou na mesma carta!');
+        
+
     }
     
     if (cartasEscolhidas[0] == cartasEscolhidas[1]) {
         alert('Você conseguiu uma combinação!');
-        cartas[opcaoUmId].setAttribute('src', 'img/azul.png');
-        cartas[opcaoDoisId].setAttribute('src', 'img/azul.png');
+        cartas[opcaoUmId].setAttribute('src', 'img/fundo-carta.png');
+        cartas[opcaoDoisId].setAttribute('src', 'img/fundo-carta.png');
         cartas[opcaoUmId].removeEventListener('click', virarCarta);
         cartas[opcaoDoisId].removeEventListener('click', virarCarta);
         cartasCertas.push(cartasEscolhidas);
     } else {
         cartas[opcaoUmId].setAttribute('src', 'img/costas.png');
         cartas[opcaoDoisId].setAttribute('src', 'img/costas.png');
-        alert('Não foi dessa vez! Tente novamente!')
     }
     
     resultadoDisplay.textContent = cartasCertas.length;
